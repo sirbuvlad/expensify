@@ -1,0 +1,10 @@
+{
+    "presets": [
+        "env",
+        "react"
+    ],
+    "plugins": [
+        "transform-class-properties", // sa permita crearea functiilor chiar in class, in loc de constructor si sa nu fii nevoit sa adaugi bind de fiecare data
+        "transform-object-rest-spread"
+    ]
+}
