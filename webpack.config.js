@@ -8,7 +8,7 @@
    return {
     entry: './src/app.js',
     output: {
-        path: path.join(__dirname, 'public'),
+        path: path.join(__dirname, 'public', 'dist'),
         filename: 'bundle.js'
     },
     module: {
@@ -43,6 +43,7 @@
     devServer: {
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true, //sa permita client side routing, this serves up index.html everytime every single time we get 404 error
+      publicPath: '/dist/'
     }   
   };
  };
