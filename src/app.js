@@ -8,6 +8,7 @@ import { setTextFilter } from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import moment from 'moment';
 
 const store = configureStore();
 
@@ -19,9 +20,9 @@ const store = configureStore();
 //     console.log(visibleExpenses);
 // });
 
-// store.dispatch(addExpense({ description: 'Water bill', amount: 4500000 }));
-// store.dispatch(addExpense({ description: 'Gas bill', amount: 0 }));
-// store.dispatch(addExpense({ description: 'Rent', amount: 109500 }));
+store.dispatch(addExpense({ description: 'Water bill', amount: 4500000, createdAt: moment() }));
+store.dispatch(addExpense({ description: 'Gas bill', amount: 0, createdAt: moment().add(4, 'days').valueOf() }));
+store.dispatch(addExpense({ description: 'Rent', amount: 109500, createdAt: moment().add(6, 'days').valueOf() }));
 
 
 // const state = store.getState();

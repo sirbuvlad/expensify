@@ -19,8 +19,8 @@ const ExpenseListItem = ({ id, description, amount, createdAt }) => {
 // load a locale
 numeral.register('locale', 'de', {
     delimiters: {
-        thousands: ' ',
-        decimal: '.'
+        thousands: '.',
+        decimal: ','
     },
     abbreviations: {
         thousand: 'k',

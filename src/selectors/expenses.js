@@ -11,11 +11,9 @@ export default (expenses, { text, sortBy, startDate, endDate }) => {
         return startDateMatch && endDateMatch && textMatch;
     }).sort((a, b) => {
         if (sortBy === 'date'){
-            console.log('se ajunge la date');
             return a.createdAt < b.createdAt ? 1 : -1;
         }
         else if (sortBy === 'amount'){
-            console.log('se ajunge la amount');
             return a.amount < b.amount ? -1 : 1;
         }
     })
